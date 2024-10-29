@@ -1,0 +1,244 @@
+.logo {
+	width: 130px;
+    height: auto;
+}
+
+.background-image-container{
+	background-image: url('img/bg.webp');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+}
+
+.contato{
+  background-image: url('img/bg.webp');
+      /* Define a posição da imagem de fundo */
+      background-position: center;
+      /* Define que a imagem de fundo cubra toda a tela */
+      background-size: cover;
+      /* Garante que o conteúdo da página esteja à frente da imagem de fundo */
+      z-index: -1;
+      min-height: 100vh;
+}
+.container {
+
+  color: white;
+}
+
+.mensagem {
+    position: absolute;
+    top: 50%;
+    left: 60%; /* Altere para mover mais para a direita */
+    transform: translate(-50%, -50%);
+    color: #333; /* Alterado para uma cor de texto */
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    font-size: 40px; /* Altere o tamanho da fonte conforme necessário */
+    font-weight: bold; /* Aplicando negrito */
+  }
+
+    #aboutMessage {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      z-index: 1000; /* Para garantir que esteja acima de outros elementos */
+    }
+    
+    .custom-modal {
+      background-color: #f8f9fa; /* Cor de fundo */
+      border-radius: 10px; /* Borda arredondada */
+    }
+
+    .custom-modal .modal-header {
+      background-color: #007bff; /* Cor de fundo do cabeçalho */
+      color: #fff; /* Cor do texto do cabeçalho */
+      border-bottom: none; /* Remove a borda inferior */
+    }
+
+    .custom-modal .modal-title {
+      font-weight: bold; /* Deixa o título em negrito */
+    }
+
+    .custom-modal .modal-body {
+      padding: 20px; /* Espaçamento interno */
+    }
+
+    .custom-modal .form-label {
+      font-weight: bold; /* Deixa as labels dos campos em negrito */
+    }
+
+    .custom-modal .btn-primary {
+      background-color: #007bff; /* Cor de fundo do botão */
+      border-color: #007bff; /* Cor da borda do botão */
+    }
+
+    .custom-modal .btn-primary:hover {
+      background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+      border-color: #0056b3; /* Cor da borda do botão ao passar o mouse */
+    }
+
+    .custom-modal .error-message {
+      color: red; /* Cor do texto da mensagem de erro */
+      display: none; /* Inicialmente, a mensagem de erro está oculta */
+    }
+
+    footer {
+      background-color: #333; /* Cor de fundo do footer */
+      color: #fff; /* Cor do texto */
+      padding: 20px 0; /* Espaçamento interno */
+    }
+
+    footer .social-icons a {
+      color: #fff; /* Cor dos ícones */
+      font-size: 24px; /* Tamanho dos ícones */
+      margin-right: 10px; /* Espaçamento entre os ícones */
+    }
+
+    footer .social-icons a:hover {
+      color: #007bff; /* Cor dos ícones ao passar o mouse */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .formulario {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    
+    .med {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    button.btnn {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    button.btnn:hover {
+      background-color: #0056b3;
+    }
+
+    button.voltar {
+      margin-top: 15px;
+      background-color: #6c757d;
+    }
+    
+    button.voltar:hover {
+      background-color: #5a6268;
+    }
+    
+    
+    .prof {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="date"],
+    .form-group input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .form-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    
+    button.btnnn {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    button.btnnn:hover {
+      background-color: #0056b3;
+    }
+    

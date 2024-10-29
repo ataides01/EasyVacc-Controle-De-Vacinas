@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Medicamentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="formulario">
+  <div class="form-container">
+    <h2 class="form">Cadastro de Medicamentos</h2>
+    <form id="medicamentoForm">
+      <div class="form-group">
+        <label for="numeroLote">Número do Lote:</label>
+        <input type="text" id="numeroLote" name="numeroLote" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="nomeMedicamento">Nome do Medicamento:</label>
+        <input type="text" id="nomeMedicamento" name="nomeMedicamento" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="dataChegada">Data de Chegada:</label>
+        <input type="date" id="dataChegada" name="dataChegada" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="dataValidade">Data de Validade:</label>
+        <input type="date" id="dataValidade" name="dataValidade" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" min="1" required>
+      </div>
+      
+      <button type="submit" class="btnn">Cadastrar Medicamento</button>
+    </form>
+    
+    <button onclick="location.href='lista.html'" class="btn voltar">Ver Lista de Medicamentos</button>
+  </div>
+
+  <script>
+    document.getElementById('medicamentoForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      // Captura os valores do formulário
+      const numeroLote = document.getElementById('numeroLote').value;
+      const nomeMedicamento = document.getElementById('nomeMedicamento').value;
+      const dataChegada = document.getElementById('dataChegada').value;
+      const dataValidade = document.getElementById('dataValidade').value;
+      const quantidade = document.getElementById('quantidade').value;
+
+      // Cria um objeto para armazenar os dados
+      const medicamento = {
+        numeroLote,
+        nomeMedicamento,
+        dataChegada,
+        dataValidade,
+        quantidade
+      };
+
+      // Armazena os dados no localStorage
+      let medicamentos = JSON.parse(localStorage.getItem('medicamentos')) || [];
+      medicamentos.push(medicamento);
+      localStorage.setItem('medicamentos', JSON.stringify(medicamentos));
+
+      // Limpa o formulário
+      this.reset();
+      alert('Medicamento cadastrado com sucesso!');
+    });
+  </script>
+</body>
+</html>

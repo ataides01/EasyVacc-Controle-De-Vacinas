@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estoque</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Medicamentos Cadastrados</h2>
+  <table>
+    <tr>
+      <th>Número do Lote</th>
+      <th>Nome do Medicamento</th>
+      <th>Data de Chegada</th>
+      <th>Data de Validade</th>
+      <th>Quantidade</th>
+    </tr>
+    <tbody id="medicamentoList"></tbody>
+  </table>
+
+  <button onclick="location.href='index2.html'">Voltar para Cadastro</button>
+</div>
+    <div class="background-image-container">
+</div>
+
+  <script>
+    // Recupera os dados do localStorage
+    const medicamentos = JSON.parse(localStorage.getItem('medicamentos')) || [];
+    const tableBody = document.getElementById('medicamentoList');
+
+    // Popula a tabela com os dados
+    medicamentos.forEach(medicamento => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${medicamento.numeroLote}</td>
+        <td>${medicamento.nomeMedicamento}</td>
+        <td>${medicamento.dataChegada}</td>
+        <td>${medicamento.dataValidade}</td>
+        <td>${medicamento.quantidade}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+  </script>
+</body>
+</html>
